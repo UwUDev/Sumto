@@ -3,6 +3,15 @@ Tusom / Wordle / Motus and other games like that solver
 
 # ⚠️ Note that the only supported language is French atm
 
+## How can i help to add a dictionary ?
+1) Fork the repo
+2) Find multiple dictionaries
+3) Put all of them in `a.dico` in the folder `test_room`
+4) Run the class `DicFilter.java` in `src/test/java`
+5) Copy `b.dico` in the folder `test_room` to `YOUR_LANG.dico` in the folder `dico`
+6) in the class `me.uwu.sumto.dico.DicoLang` add your language to the enum like `ENG("Cool language", "YOUR_LANG", "cl");` the 2nd parametter must be the name of the .dico file
+7) Make a pull request
+
 ## How to run ?
 1) Install java  
 2) Download the latest version [here](https://github.com/UwUDev/Sumto/releases)
