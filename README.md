@@ -1,7 +1,7 @@
 # Sumto
 Tusom / Wordle / Motus and other games like that solver
 
-# ⚠️ Note that the only supported language is French atm ⚠️
+# ⚠️Note that the only supported language is French atm⚠️
 
 ## How to run ?
 1) Install java  
