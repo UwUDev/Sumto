@@ -8,6 +8,7 @@ import me.uwu.sumto.Solver;
 import me.uwu.sumto.dico.DicoLang;
 import okhttp3.*;
 
+@SuppressWarnings("deprecation")
 public class Tusmo {
     private final String shortId, playerId;
     private final Solver solver;
@@ -15,6 +16,7 @@ public class Tusmo {
     private final OkHttpClient client = new OkHttpClient();
     private final Gson gson = new Gson();
 
+    @SuppressWarnings("ConstantConditions")
     public Tusmo(String shortId, String playerId) throws Exception {
         this.shortId = shortId;
         this.playerId = playerId;
@@ -42,9 +44,9 @@ public class Tusmo {
         solver = new Solver(dicoLang, len, firstChar);
     }
 
+    @SuppressWarnings("ConstantConditions")
     public void play() throws Exception{
-        boolean found = false;
-        while (!found) {
+        while (true) {
             String move = solver.getRandomMove();
             MediaType mediaType = MediaType.parse("application/json");
             RequestBody body = RequestBody.create(mediaType, "{\n  \"operationName\": \"TryWord\",\n  \"variables\": {\n    \"word\": \"" + move + "\",\n    \"shortId\": \"" + shortId + "\",\n    \"playerId\": \"" + playerId + "\",\n    \"accessToken\": \"\",\n    \"lang\": \"fr\"\n  },\n  \"query\": \"mutation TryWord($shortId: ID!, $word: String!, $playerId: ID!, $lang: String!, $accessToken: String) {\\n  tryWord(\\n    shortId: $shortId\\n    word: $word\\n    playerId: $playerId\\n    lang: $lang\\n    accessToken: $accessToken\\n  ) {\\n    word\\n    validation\\n    wordExists\\n    hasFoundWord\\n    mask\\n    score\\n    __typename\\n  }\\n}\"\n}");
@@ -56,8 +58,7 @@ public class Tusmo {
 
             JsonObject json = gson.fromJson(client.newCall(request).execute().body().string(), JsonObject.class);
 
-            found = json.get("data").getAsJsonObject().get("tryWord").getAsJsonObject().get("hasFoundWord").getAsBoolean();
-            if (found)
+            if(json.get("data").getAsJsonObject().get("tryWord").getAsJsonObject().get("hasFoundWord").getAsBoolean())
                 break;
 
             StringBuilder sb = new StringBuilder();

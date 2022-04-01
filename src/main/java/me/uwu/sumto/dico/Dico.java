@@ -15,7 +15,7 @@ public class Dico {
     }
 
     public void keepOnlyWordWithLength(int length) {
-        List<String> toKeep = new ArrayList<>(dico.stream().filter(word -> word.length() == length).collect(Collectors.toList()));
+        List<String> toKeep = dico.stream().filter(word -> word.length() == length).collect(Collectors.toList());
         if (toKeep.size() != 0) {
             dico.clear();
             dico.addAll(toKeep);
@@ -24,7 +24,7 @@ public class Dico {
 
     public void keepOnlyWordStartingWith(char letter) {
         String finalLetter = String.valueOf(letter).toUpperCase();
-        List<String> toKeep = new ArrayList<>(dico.stream().filter(word -> word.startsWith(finalLetter)).collect(Collectors.toList()));
+        List<String> toKeep = dico.stream().filter(word -> word.startsWith(finalLetter)).collect(Collectors.toList());
         if (toKeep.size() != 0) {
             dico.clear();
             dico.addAll(toKeep);
@@ -32,7 +32,7 @@ public class Dico {
     }
 
     public void keepOnlyWordContainingLetterAt(char letter, int index) {
-        List<String> toKeep = new ArrayList<>(dico.stream().filter(word -> word.charAt(index) == letter).collect(Collectors.toList()));
+        List<String> toKeep = dico.stream().filter(word -> word.charAt(index) == letter).collect(Collectors.toList());
         if (toKeep.size() != 0) {
             dico.clear();
             dico.addAll(toKeep);
