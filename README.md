@@ -28,3 +28,5 @@ Tusom / Wordle / Motus and other games like that solver
 If you have a 7 letters word you should type somethig like that `rr--yy-`  
 Note that if the game doesn't recognise the word you can type `skip` instead of the answer
 5) Repeat step 3 and 4
+## Preview
+https://youtu.be/zC_-_YjRKHU
