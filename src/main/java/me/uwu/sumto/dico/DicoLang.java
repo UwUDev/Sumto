@@ -3,8 +3,9 @@ package me.uwu.sumto.dico;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-@SuppressWarnings("SpellCheckingInspection")
 public enum DicoLang {
+
+    //on ajoutera les autres langues ici plus tard
     FR("Français", "baguette", "fr");
 
     public final String name, file, identifier;

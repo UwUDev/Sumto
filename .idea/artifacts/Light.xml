@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Light">
+    <output-path>$PROJECT_DIR$/out/artifacts/Light</output-path>
+    <root id="archive" name="Sumto.jar">
+      <element id="module-output" name="Sumto" />
+      <element id="extracted-dir" path="$USER_HOME$/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

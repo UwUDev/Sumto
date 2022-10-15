@@ -1,5 +1,5 @@
 # Sumto
-Tusom / Wordle / Motus and other games like that solver
+Tusmo / Wordle / Motus and other games like that solver
 
 # ⚠️ Note that the only supported language is French atm
 

@@ -9,10 +9,14 @@ public class Tester {
 
         for (int i = 0; i < numberOfTusmoToSkip; i++) {
             try {
+                // retrouve la session
                 Tusmo tusmo = new Tusmo("sd27b9be", "4a6b60c169906fe09ff27c81ca");
+
+                // joue à notre place sur le site
                 tusmo.play();
-            } catch (Exception exception) {
-                exception.printStackTrace();
+            } catch (Exception e) {
+                // arrive quand la session est expirée/invalide
+                e.printStackTrace();
                 System.exit(0);
             }
         }
