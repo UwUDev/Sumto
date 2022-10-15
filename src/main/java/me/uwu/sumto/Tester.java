@@ -4,7 +4,7 @@ import me.uwu.sumto.game.Tusmo;
 
 public class Tester {
     public static void main(String[] args) {
-        int numberOfTusmoToSkip = 5;
+        int numberOfTusmoToSkip = 5; // nombre de tableaux à faire
 
 
         for (int i = 0; i < numberOfTusmoToSkip; i++) {

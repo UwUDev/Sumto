@@ -15,9 +15,9 @@ public class Dico {
     }
 
     public void keepOnlyWordWithLength(int length) {
-        // utile car on peut pas supprimer pendant un foreach
+        // utile, car on ne peut pas supprimer pendant un foreach
         List<String> toKeep = words.stream().filter(word -> word.length() == length).collect(Collectors.toList());
-        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement un erreur de frappe
+        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement une erreur de frappe
             words.clear();
             words.addAll(toKeep);
         }
@@ -26,25 +26,25 @@ public class Dico {
     public void keepOnlyWordStartingWith(char letter) {
         String finalLetter = String.valueOf(letter).toUpperCase();
 
-        // utile car on peut pas supprimer pendant un foreach
+        // utile, car on ne peut pas supprimer pendant un foreach
         List<String> toKeep = words.stream().filter(word -> word.startsWith(finalLetter)).collect(Collectors.toList());
-        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement un erreur de frappe
+        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement une erreur de frappe
             words.clear();
             words.addAll(toKeep);
         }
     }
 
     public void keepOnlyWordContainingLetterAt(char letter, int index) {
-        // utile car on peut pas supprimer pendant un foreach
+        // utile, car on ne peut pas supprimer pendant un foreach
         List<String> toKeep = words.stream().filter(word -> word.charAt(index) == letter).collect(Collectors.toList());
-        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement un erreur de frappe
+        if (toKeep.size() != 0) {  // si 0, on garde tout car c'es surement une erreur de frappe
             words.clear();
             words.addAll(toKeep);
         }
     }
 
     public void keepOnlyWordContaining(char[] letters) {
-        List<String> toKeep = new ArrayList<>(); // utile car on peut pas supprimer pendant un foreach
+        List<String> toKeep = new ArrayList<>(); // utile, car on ne peut pas supprimer pendant un foreach
 
         words.forEach(word -> {
             boolean pass = true;
@@ -58,14 +58,14 @@ public class Dico {
             if (pass) toKeep.add(word);
         });
 
-        if (toKeep.size() != 0) { // si 0, on garde tout car c'es surement un erreur de frappe
+        if (toKeep.size() != 0) { // si 0, on garde tout car c'es surement une erreur de frappe
             words.clear();
             words.addAll(toKeep);
         }
     }
 
     public void keepOnlyWordNotContaining(char[] letters) {
-        List<String> toKeep = new ArrayList<>(); // utile car on peut pas supprimer pendant un foreach
+        List<String> toKeep = new ArrayList<>(); // utile, car on ne peut pas supprimer pendant un foreach
 
         words.forEach(word -> {
             boolean pass = true;
@@ -80,7 +80,7 @@ public class Dico {
         });
 
 
-        if (toKeep.size() != 0) { // si 0, on garde tout car c'es surement un erreur de frappe
+        if (toKeep.size() != 0) { // si 0, on garde tout car c'es surement une erreur de frappe
             words.clear();
             words.addAll(toKeep);
         }

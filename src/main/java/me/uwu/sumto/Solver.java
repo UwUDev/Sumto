@@ -62,7 +62,7 @@ public class Solver {
         word = word.toUpperCase();
         StringBuilder toWhiteList = new StringBuilder(); // les lettres qui sont dans le mot et qui sont jaunes
         StringBuilder toVerify = new StringBuilder(); // les lettres qui sont dans le mot et qui sont grises
-        StringBuilder toKeep = new StringBuilder(); // les lettres qui sont dans le mot et qui sont rouges
+        StringBuilder toKeep = new StringBuilder(); // les lettres qui sont dans le mot et qui sont rouges ou jaunes
         if (word.length() != wordSize || data.length() != wordSize) {
             System.err.println("word size mismatch");
             return;
@@ -114,9 +114,7 @@ public class Solver {
         }
 
         toBan = new StringBuilder();
-        for (char character : charSet) {
-            toBan.append(character);
-        }
+        charSet.forEach(toBan::append);
 
         //System.out.println(toBan);
 

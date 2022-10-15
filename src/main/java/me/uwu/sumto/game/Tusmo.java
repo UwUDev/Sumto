@@ -54,7 +54,7 @@ public class Tusmo {
     }
 
     /**
-     * Joue un seul tableau de, on peut en relevance le lane plusieurs fois sans repasser par le constructeur pour récupérer la session
+     * Joue un seul tableau, on peut en relevance le lancer plusieurs fois sans repasser par le constructeur pour récupérer la session
      */
 
     @SuppressWarnings("ConstantConditions")
