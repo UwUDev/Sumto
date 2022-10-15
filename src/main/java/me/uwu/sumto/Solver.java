@@ -31,6 +31,9 @@ public class Solver {
      * prends un mot aléatoire dans la liste des valides
      */
     public String getRandomMove() {
+        // TODO: 15/10/2022 faire un truc plus efficace faudrait faire une fonction getBestMove qui prends un mot avec le plus de lettres différentes
+        // TODO: 15/10/2022 regarder les stratégies pour trouver le mot le plus efficace a motus
+
         //System.out.println(dico.dico.size());
         String best = dico.words.get(new Random().nextInt(dico.words.size()));
         dico.words.remove(best);
