@@ -26,12 +26,19 @@ public class Solver {
         this.dico.keepOnlyWordWithLength(wordSize);
     }
 
+    public String getBestMove() {
+        return null;
+    }
+
 
     /**
+     * @deprecated utilisez {@link #getBestMove()} a la place
+     * <br>
      * prends un mot aléatoire dans la liste des valides
      */
+    @Deprecated
     public String getRandomMove() {
-        // TODO: 15/10/2022 faire un truc plus efficace faudrait faire une fonction getBestMove qui prends un mot avec le plus de lettres différentes
+        // TODO: 15/10/2022 faire un truc plus efficace faudrait faire la fonction getBestMove qui prends un mot avec le plus de lettres différentes
         // TODO: 15/10/2022 regarder les stratégies pour trouver le mot le plus efficace a motus
 
         //System.out.println(dico.dico.size());
